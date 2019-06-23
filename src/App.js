@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useState} from 'react';
+import SearchContainer from './page/search/SearchContainer'
 import './App.css';
+import UTSRest from './utils/rest';
 
-function App() {
+const SparrowTimeTable = () => {
+  //State hooks
+  const [subjects,setSubjects] = useState([])
+
+  function restTest() {
+    UTSRest.searchSubject("31272")
+    .then((res) =>{
+      console.log(res.data)
+    })
+    .catch((err)=>{
+      console.error(err)
+    })
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>UTS Timetable Query Tool</h1>
+        <small>By Nurupo :)</small>
+        <SearchContainer/>
       </header>
     </div>
   );
 }
 
-export default App;
+export default SparrowTimeTable;
