@@ -1,6 +1,7 @@
 body{
   padding: 0px;
   margin: 0px;
+  font-family: arial,sans-serif;
 }
 .App {
   text-align: center;
@@ -55,4 +56,17 @@ body{
   to {
     transform: rotate(360deg);
   }
+}
+
+.search-title {
+  font-size: 18px;
+  line-height: 1.33;
+  font-weight: bold;
+  color:#1a0dab;
+}
+.search-info {
+  color:#006621;
+}
+.search-info p {
+  margin: 0px;
 }
