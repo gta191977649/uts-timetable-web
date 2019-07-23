@@ -4,6 +4,8 @@ import Subject from './ResultSubjectItems'
 import SearchHeader from './SearchHeader'
 import UTSRest from '../../utils/rest'
 import UTSUtils from '../../utils/utsutils'
+import Header from '../header/Header'
+
 class SearchResultContainer extends Component {
     
     constructor(props) {
@@ -49,6 +51,7 @@ class SearchResultContainer extends Component {
         const {keywords,searchResult} = this.state
         return (
             <React.Fragment>
+                <Header/>
                 <SearchHeader searchTerm={keywords}/>
                 <p>Search for: {keywords}, results:{searchResult.length}</p>
                 <div className="row">

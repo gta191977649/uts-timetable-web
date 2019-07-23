@@ -5,7 +5,7 @@ class Header extends Component {
         return (
             <div className="container-fuild header-border" id="r">
                 <div className="container">
-                Hello world
+                    <h1><a href='/'>UTS myTimetable -w-</a></h1>
                 </div>
             </div>
             

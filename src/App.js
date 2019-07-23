@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import SearchContainer from './page/search/SearchContainer'
-import Header from './page/header/Header'
 import './App.css';
 import UTSRest from './utils/rest';
 import {Link,Route,BrowserRouter as Router} from 'react-router-dom' 
@@ -30,7 +29,6 @@ const TestRoute = () => {
 const App = () => {
   return(
     <div className="container-fluid">
-      <Header/>
       <div className="container">
 
         <Router>
