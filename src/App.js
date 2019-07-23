@@ -4,6 +4,7 @@ import './App.css';
 import UTSRest from './utils/rest';
 import {Link,Route,BrowserRouter as Router} from 'react-router-dom' 
 import SearchResult from './page/search-result/SearchResultContainer'
+import SubjectDetail from './page/subject/SubjectDetail'
 const SparrowTimeTable = () => {
   //State hooks
   const [subjects,setSubjects] = useState([])
@@ -34,6 +35,7 @@ const App = () => {
         <Router>
           <Route exact path='/' component={SparrowTimeTable}></Route>
           <Route path='/search/:keywords' component={SearchResult}></Route>
+          <Route path='/subject/:code' component={SubjectDetail}></Route>
         </Router>
       </div>
     </div>

@@ -16,14 +16,12 @@ class SearchHeader extends Component {
     render() {
         const {searchTerm} = this.state;
         return (
-            <div className="form-inline">
-                <div className="form-group">
+            <div className="input-group col-md-8">
                     <input className="form-control" value={searchTerm}
                     placeholder="课号/课名" onChange={(e)=> {
                         this.setState({searchTerm: e.target.value})
                     }}/> 
-                </div>
-                <div className="form-group">
+                <div className="input-group-btn">
                     <Link to={`/search/${searchTerm}`} className="btn btn-primary " type="button" value="搜索">搜索</Link>
                     
                 </div>
